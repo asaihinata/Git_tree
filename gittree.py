@@ -12,7 +12,7 @@ def grouping(fileList):
     return root
 def displayItems(items,path,prefix,color):
     for index,item in enumerate(sorted(items.keys())):
-        if(isinstance(skippath,(list,tuple)) and item in skippath)or(isinstance(skippath,str) and item==skippath):break
+        if(isinstance(skippath,(list,tuple)) and item in skippath)or(isinstance(skippath,str) and item==skippath):continue
         if index==len(items)-1:
             print(prefix+'└── '+appendColor(path,item,color))
             nextPrefix=prefix+' '
